@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<link rel='stylesheet' href='style.css'>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed:wght@400;500;800&display=swap" rel="stylesheet">
+	<title>ТуристPro - поиск маршрутов</title>
+</head>
+
+<body>
+
+    <div class='header'>
+		<div class='container'>
+			<div class='header-line'>
+				<div class='header-logo'>
+					<img src="logo.png" alt="" class="logo">
+				</div>
+				
+				<div class='navs'>
+					<a class='nav-items' href="index.html">ГЛАВНАЯ</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+    <div id="myBtnContainer">
+        <button class="btn all" onclick="filterSelection('all')">ВСЕ РЕГИОНЫ</button>
+        <button class="btn cfo" onclick="filterSelection('cfo')">ЦЕНТРАЛЬНЫЙ ФО</button>
+        <button class="btn szfo" onclick="filterSelection('szfo')">СЕВЕРО-ЗАПАДНЫЙ ФО</button>
+        <button class="btn ufo" onclick="filterSelection('ufo')">ЮЖНЫЙ ФО</button>
+        <button class="btn pfo" onclick="filterSelection('pfo')">ПРИВОЛЖСКИЙ ФО</button>
+        <button class="btn yfo" onclick="filterSelection('yfo')">УРАЛЬСКИЙ ФО</button>
+        <button class="btn sfo" onclick="filterSelection('sfo')">СИБИРСКИЙ ФО</button>
+        <button class="btn dfo" onclick="filterSelection('dfo')">ДАЛЬНЕВОСТОЧНЫЙ ФО</button>
+    </div>
+
+    <div class="block-cover">
+
+        <!-- центральный начальный -->
+        <div class="filterDiv cfo">
+            <div class="nvoronej">
+                ВОРОНЕЖСКАЯ ОБЛАСТЬ
+            </div>
+            <div class="nmvoronej">
+                "ПОИСК НАСТОЯЩИХ СОКРОВИЩ"
+            </div>
+            <div class="dtvoronej">
+                ДАТА ПОХОДА: 5 ИЮЛЯ - 8 ИЮЛЯ (4 дня и 3 ночи)
+            </div>
+            <div class="czvoronej">
+                КОЛИЧЕСТВО ВОЗМОЖНЫХ ЗОН ПОСЕЩЕНИЯ: 2
+            </div>
+            <div class="ivoronej">
+                <img src="voronej.jpg" alt="" class="imgvoronej">
+            </div>
+            <div class="btvkz">
+                <form id="forma1">
+                    <input type="hidden" id="placem1" value="voronejpl" name="voronejplace">
+                    <div class="buttonop">
+                        <button type="submit" class="vkz1" href="seat.html">ПЕРЕЙТИ К ВЫБОРУ КОНКРЕТНЫХ ЗОН ПОСЕЩЕНИЯ</button>
+                    </div>
+                    <script>
+                        const forma1=document.querySelector('button.vkz1');
+                        const placefull1=document.getElementById('placem1');
+                        forma1.addEventListener('click',function(e) {
+                            e.preventDefault();
+                            const placeend1=placefull1.value;
+                            localStorage.setItem('placeend',placeend1);
+                            window.location.href="seat.html";
+                        })
+                    </script>
+                </form>
+            </div>
+        </div>
+
+        <!-- северо-западный базовый -->
+        <div class="filterDiv szfo">
+            <div class="ncarelia">
+                КАРЕЛИЯ
+            </div>
+            <div class="nmcarelia">
+                "ПЁТСЁВААРА - ЦАРСТВО ГОРНЫХ ТРОЛЛЕЙ"
+            </div>
+            <div class="dtcarelia">
+                ДАТА ПОХОДА: 2 ИЮЛЯ - 3 ИЮЛЯ (2 дня и 1 ночь)
+            </div>
+            <div class="czcarelia">
+                КОЛИЧЕСТВО ВОЗМОЖНЫХ ЗОН ПОСЕЩЕНИЯ: 2
+            </div>
+            <div class="icarelia">
+                <img src="carelia.jpg" alt="" class="imgcarelia">
+            </div>
+            <div class="btvkz">
+                <form id="forma2">
+                    <input type="hidden" id="placem2" value="careliapl" name="careliaplace">
+                    <div class="buttonop">
+                        <button type="submit" class="vkz2" href="seat.html">ПЕРЕЙТИ К ВЫБОРУ КОНКРЕТНЫХ ЗОН ПОСЕЩЕНИЯ</button>
+                    </div>
+                    <script>
+                        const forma2=document.querySelector('button.vkz2');
+                        const placefull2=document.getElementById('placem2');
+                        forma2.addEventListener('click',function(e) {
+                            e.preventDefault();
+                            const placeend2=placefull2.value;
+                            localStorage.setItem('placeend',placeend2);
+                            window.location.href="seat.html";
+                        })
+                    </script>
+                </form>
+            </div>
+        </div>
+
+        <!-- южный специализированный -->
+        <div class="filterDiv ufo">
+            <div class="npat">
+                КАВКАЗ
+            </div>
+            <div class="nmpat">
+                "ТРОПАМИ ПЯТИГОРИИ"
+            </div>
+            <div class="dtpat">
+                ДАТА ПОХОДА: 8 ИЮЛЯ - 13 ИЮЛЯ (6 дней и 5 ночей)
+            </div>
+            <div class="czpat">
+                КОЛИЧЕСТВО ВОЗМОЖНЫХ ЗОН ПОСЕЩЕНИЯ: 2
+            </div>
+            <div class="ipat">
+                <img src="pat.jpg" alt="" class="imgpat">
+            </div>
+            <div class="btvkz">
+                <form method="get" action="">
+                    <input type="hidden" id="placem3" value="patpl" name="patplace">
+                    <div class="buttonop">
+                        <button type="submit" class="vkz3" href="seat.html">ПЕРЕЙТИ К ВЫБОРУ КОНКРЕТНЫХ ЗОН ПОСЕЩЕНИЯ</button>
+                    </div>
+                    <script>
+                        const forma3=document.querySelector('button.vkz3');
+                        const placefull3=document.getElementById('placem3');
+                        forma3.addEventListener('click',function(e) {
+                            e.preventDefault();
+                            const placeend3=placefull3.value;
+                            localStorage.setItem('placeend',placeend3);
+                            window.location.href="seat.html";
+                        })
+                    </script>
+                </form>
+            </div>
+        </div>
+
+        <!-- дальневосточный высший -->
+        <div class="filterDiv dfo">
+            <div class="nkap">
+                КАМЧАТКА
+            </div>
+            <div class="nmkap">
+                "СТРАЖИ ДАЛЁКОГО ГОРОДА"
+            </div>
+            <div class="dtkap">
+                ДАТА ПОХОДА: 10 ИЮЛЯ - 18 ИЮЛЯ (9 дней и 8 ночей)
+            </div>
+            <div class="czkap">
+                КОЛИЧЕСТВО ВОЗМОЖНЫХ ЗОН ПОСЕЩЕНИЯ: 2
+            </div>
+            <div class="ikap">
+                <img src="kap.jpg" alt="" class="imgkap">
+            </div>
+            <div class="btvkz">
+                <form method="get" action="">
+                    <input type="hidden" id="placem4" value="kappl" name="kapplace">
+                    <div class="buttonop">
+                        <button type="submit" class="vkz4" href="seat.html">ПЕРЕЙТИ К ВЫБОРУ КОНКРЕТНЫХ ЗОН ПОСЕЩЕНИЯ</button>
+                    </div>
+                    <script>
+                        const forma4=document.querySelector('button.vkz4');
+                        const placefull4=document.getElementById('placem4');
+                        forma4.addEventListener('click',function(e) {
+                            e.preventDefault();
+                            const placeend4=placefull4.value;
+                            localStorage.setItem('placeend',placeend4);
+                            window.location.href="seat.html";
+                        })
+                    </script>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- <script>
+        placem=document.getElementById('placem1');
+        elem=document.querySelector('button.vkz1')
+        elem.addEventListener('submit',function(e) {
+            e.preventDefault();
+            placemvalue=placem.value;
+            localStorage.setItem('place',placemvalue);
+
+            window.location.href="seat.html";
+        })
+    </script>
+    <script>
+        placem=document.getElementById('placem2');
+        elem=document.querySelector('button.vkz2')
+        elem.addEventListener('submit',function(e) {
+            e.preventDefault();
+            placemvalue=placem.value;
+            localStorage.setItem('place',placemvalue);
+
+            window.location.href="seat.html";
+        })
+    </script>
+    <script>
+        placem=document.getElementById('placem3');
+        elem=document.querySelector('button.vkz3')
+        elem.addEventListener('click',function(e) {
+            e.preventDefault();
+            placemvalue=placem.value;
+            localStorage.setItem('submit',placemvalue);
+
+            window.location.href="seat.html";
+        })
+    </script>
+    <script>
+        placem=document.getElementById('placem4');
+        elem=document.querySelector('button.vkz4')
+        elem.addEventListener('submit',function(e) {
+            e.preventDefault();
+            placemvalue=placem.value;
+            localStorage.setItem('place',placemvalue);
+
+            window.location.href="seat.html";
+        })
+    </script> -->
+    
+    <div class="final">
+        <div class="nfinal">
+            ОСТАВАЙТЕСЬ С НАМИ - В БЛИЖАЙШЕМ БУДУЩЕМ ПОЯВЯТСЯ НОВЫЕ МАРШРУТЫ!
+        </div>
+    </div>
+
+    <!-- <script>
+		localStorage.removeItem('countppl');
+        localStorage.removeItem('enddt');
+        localStorage.removeItem('level');
+        localStorage.removeItem('startdt');
+        localStorage.removeItem('placem2');
+        localStorage.removeItem('placem');
+    </script> -->
+
+    <!-- <div>Регион: <span id="region"></span></div>
+    <div>Начало отдыха: <span id="startdt"></span></div>
+    <div>Конец отдыха: <span id="enddt"></span></div>
+    <div>Количество человек: <span id="countppl"></span></div>
+    <div>Уровень подготовки: <span id="level"></span></div>
+
+    <script>
+
+        const regions=localStorage.getItem('region');
+        const startdts=localStorage.getItem('startdt');
+        const enddts=localStorage.getItem('enddt');
+        const countppls=localStorage.getItem('countppl');
+        const levels=localStorage.getItem('level');
+
+        document.getElementById('region').textContent=regions;
+        document.getElementById('startdt').textContent=startdts;
+        document.getElementById('enddt').textContent=enddts;
+        document.getElementById('countppl').textContent=countppls;
+        document.getElementById('level').textContent=levels;
+
+    </script> -->
+
+    <script src="script.js"></script>
+
+    <div class="fouter">
+		<div class="fouternum">
+			ТЕЛЕФОН ДЛЯ СВЯЗИ: +7(812) ХХХ-ХХ-ХХ 
+		</div>
+		<div class="foutero">
+			изображения взяты от storyset на Freepik
+		</div>
+	</div>
+
+</body>
+</html>

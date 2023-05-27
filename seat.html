@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<link rel='stylesheet' href='style.css'>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed:wght@400;500;800&display=swap" rel="stylesheet">
+	<title>ТуристPro - выбор зон в маршруте</title>
+</head>
+
+<body>
+
+    <div class='header'>
+		<div class='container'>
+			<div class='header-line'>
+				<div class='header-logo'>
+					<img src="logo.png" alt="" class="logo">
+				</div>
+				
+				<div class='navs'>
+					<a class='nav-items' href="index.html">ГЛАВНАЯ</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		const place=localStorage.getItem('placeend');
+		localStorage.removeItem('vybor1');
+        localStorage.removeItem('vybor2');
+	</script>
+	
+	<div id="myBtnContainer1">
+		<button class="but all" onclick="filterSelection('all')">all</button>
+        <button class="but voronejpl" onclick="filterSelection('voronejpl')">voronej</button>
+        <button class="but careliapl" onclick="filterSelection('careliapl')">carelia</button>
+        <button class="but patpl" onclick="filterSelection('patpl')">pat</button>
+        <button class="but kappl" onclick="filterSelection('kappl')">kap</button>
+    </div>
+
+	<div class="boxmasrh">
+		<!-- voronejpl -->
+		<div class="filtermarsh voronejpl">
+			<div class="marshbg">
+				<div class="vmarsh1">
+					ВЫБРАННЫЙ МАРШРУТ:
+				</div>
+				<div class="nmarsh1">
+					"ПОИСК НАСТОЯЩИХ СОКРОВИЩ"
+				</div>
+				<div class="dtmarsh1">
+					ДАТА ПОХОДА: 5 ИЮЛЯ - 8 ИЮЛЯ (4 дня и 3 ночи)
+				</div>
+				<div class="harder1">
+					СЛОЖНОСТЬ МАРШРУТА: НАЧАЛЬНЫЙ УРОВЕНЬ
+				</div>
+			</div>
+			<form id="marshf1">
+				<div class="zons1">
+					<div class="marshvar1">ВЫБЕРИТЕ ЗОНЫ ДЛЯ ПОСЕЩЕНИЯ:</div>
+					<div class="m11">
+						<input id="zon11" type="checkbox" class="zona11" name="zon11" value="svit" checked="checked">
+						<label class="zonas11" for="zon11">"Свитский корпус"</label>
+						<img src="svits.jpg" alt="" class="imgsvits">
+						<div class="svitop">
+							Новый отреставрированный Свитский корпус в замке Ольденбургских (Рамонь). Там есть подлинные рисунки Ольги Куликовской и другие артефакты. Корпус был открыт после долгой реставрации в 2016 году.
+						</div>
+					</div>
+					<div class="m11">
+						<input id="zon12" type="checkbox" class="zona12" name="zon12" value="shatr" checked="checked">
+						<label class="zonas12" for="zon12">Шатрище</label>
+						<img src="shatr.jpg" alt="" class="imgsvits">
+						<div class="svitop">
+							Гора Шатрище — уникальный меловой останец, геоморфологический памятник, известный среди путешественников как «Шатер-гора». Шатрище имеет практически правильную конусообразную форму.
+						</div>
+					</div>
+				</div>
+				<div class="marsh1map">
+					<iframe class="marshmap1" src="https://www.google.com/maps/embed?pb=!1m74!1m12!1m3!1d636928.7531038371!2d38.83709708711224!3d51.4213725966475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m59!3e2!4m5!1s0x413b2f1bb130c447%3A0xbc2247af267ac63a!2z0JLQvtGA0L7QvdC10LYtMQ!3m2!1d51.6795395!2d39.206261999999995!4m5!1s0x413b1fd719753e23%3A0x278c56be1a679e69!2z0JTQstC-0YDRhtC-0LLRi9C5INC60L7QvNC_0LvQtdC60YEg0J7Qu9GM0LTQtdC90LHRg9GA0LPRgdC60LjRhQ!3m2!1d51.9081611!2d39.340256!4m5!1s0x413b1fa23295b691%3A0x8420f472db5c947a!2z0KHQstC40YLRgdC60LjQuSDQutC-0YDQv9GD0YE!3m2!1d51.9080358!2d39.3394804!4m5!1s0x413b1ca47eb76cfb%3A0xf841b2c91fa7d19!2z0JLQvtGA0L7QvdC10LbRgdC60LjQuSDQs9C-0YHRg9C00LDRgNGB0YLQstC10L3QvdGL0Lkg0L_RgNC40YDQvtC00L3Ri9C5INCx0LjQvtGB0YTQtdGA0L3Ri9C5INC30LDQv9C-0LLQtdC00L3QuNC6INC40LzQtdC90Lgg0JIu0JwuINCf0LXRgdC60L7QstCw!3m2!1d51.902076799999996!2d39.5564676!4m5!1s0x412361167c1afb01%3A0x28e9a5f94862b2f7!2z0LPQvtGA0LAg0KjQsNGC0YDQuNGJ0LU!3m2!1d50.9691232!2d39.425999399999995!4m5!1s0x4123620b32e4aa31%3A0x2706b165edce577e!2z0KbQtdGA0LrQvtCy0Ywg0KHQuNGG0LjQu9C40LnRgdC60L7QuSDQuNC60L7QvdGLINCR0L7QttC40LXQuSDQnNCw0YLQtdGA0Lg!3m2!1d50.9667403!2d39.2927104!4m5!1s0x41236268b9362c43%3A0xbc810ec5ec5f09de!2z0JTQuNCy0L3QvtCz0L7RgNGM0LU!3m2!1d50.952274499999994!2d39.2918762!4m5!1s0x41249e243c46b1a3%3A0xa3c4801c527801c!2z0JrQvtC_0LDQvdC40YnQtQ!3m2!1d51.005042499999995!2d39.3431844!4m5!1s0x413b2f5ce874e813%3A0x48d94c0efba762bd!2z0JLQvtGA0L7QvdC10LY!3m2!1d51.668348699999996!2d39.1919288!4m3!3m2!1d51.6797129!2d39.206373299999996!5e0!3m2!1sru!2sru!4v1684852539842!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+					*так будет выглядеть Ваш маршрут при посещении всех возможных зон*
+				</div>
+				<div class="buttonbr">
+					<button type="submit" id="buto1" class="bron1" href="booking.html">ЗАБРОНИРОВАТЬ</button>
+				</div>
+				<script>
+					const but1=document.getElementById("buto1")
+					but1.addEventListener('click', function() {
+						if (zon11.checked) {
+							const formm=document.getElementById('marshf1');
+							const vybor1=document.getElementById('zon11');
+							formm.addEventListener('submit',function(e) {
+								e.preventDefault();
+								const vybor1value=vybor1.value;
+								localStorage.setItem('vybor1',vybor1value);
+								window.location.href="booking.html";
+							})
+						} else {
+							const formm=document.getElementById('marshf1');
+							const vybor1=document.getElementById('zon11');
+							formm.addEventListener('submit',function(e) {
+								e.preventDefault();
+								const vybor1value=vybor1.value;
+								localStorage.removeItem('vybor1');
+								window.location.href="booking.html";
+							})
+						}
+						var element2=document.querySelector(".zona12");
+						if (zon12.checked) {
+							const formm=document.getElementById('marshf1');
+							const vybor2=document.getElementById('zon12');
+							formm.addEventListener('submit',function(e) {
+								e.preventDefault();
+								const vybor2value=vybor2.value;
+								localStorage.setItem('vybor2',vybor2value);
+								window.location.href="booking.html";
+							})
+						} else {
+							const formm=document.getElementById('marshf1');
+							const vybor1=document.getElementById('zon11');
+							formm.addEventListener('submit',function(e) {
+								e.preventDefault();
+								const vybor1value=vybor1.value;
+								localStorage.removeItem('vybor2');
+								window.location.href="booking.html";
+							})
+						}
+					})
+				</script>
+			</form>
+		</div>
+
+	<div class="boxmasrh">
+		<!-- careliapl -->
+		<div class="filtermarsh careliapl">
+			<div class="marshbg">
+				<div class="vmarsh1">
+					ВЫБРАННЫЙ МАРШРУТ:
+				</div>
+				<div class="nmarsh1">
+					"ПЁТСЁВААРА - ЦАРСТВО ГОРНЫХ ТРОЛЛЕЙ"
+				</div>
+				<div class="dtmarsh1">
+					ДАТА ПОХОДА: 2 ИЮЛЯ - 3 ИЮЛЯ (2 дня и 1 ночь)
+				</div>
+				<div class="harder1">
+					СЛОЖНОСТЬ МАРШРУТА: БАЗОВЫЙ УРОВЕНЬ
+				</div>
+			</div>
+			<form id="marshf2">
+				<div class="zons1">
+					<div class="marshvar1">ВЫБЕРИТЕ ЗОНЫ ДЛЯ ПОСЕЩЕНИЯ:</div>
+					<div class="m11">
+						<input id="zon21" type="checkbox" class="zona21" name="zon21" value="hack" checked="checked">
+						<label class="zonas11" for="zon21">Озеро Хауккаярви</label>
+						<img src="hack.jpg" alt="" class="imgsvits">
+						<div class="svitop">
+							Озеро весьма интересно для прогулок из-за своих скалистых берегов. Оно образовано в скальных трещинах, поэтому имеет сильно вытянутую форму. Вокруг озера есть насколько полян для отдыха.
+						</div>
+					</div>
+					<div class="m11">
+						<input id="zon22" type="checkbox" class="zona22" name="zon22" value="kirya" checked="checked">
+						<label class="zonas11" for="zon22">Посёлок Кирьявалахти</label>
+						<img src="kirya.jpg" alt="" class="imgsvits">
+						<div class="svitop">
+							Кирьявалахти (фин. Kirjavalahti) — посёлок в составе Кааламского сельского поселения Сортавальского района Республики Карелия. Расположен на берегу залива в северной части Ладожского озера.
+						</div>
+					</div>
+				</div>
+				<div class="marsh1map">
+					<iframe class="marshmap1" src="https://www.google.com/maps/embed?pb=!1m70!1m12!1m3!1d992323.0121430666!2d29.10013695651602!3d60.937118918775155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m55!3e2!4m5!1s0x4696378cc74a65ed%3A0x6dc7673fab848eff!2z0KHQsNC90LrRgi3Qn9C10YLQtdGA0LHRg9GA0LM!3m2!1d59.9310584!2d30.3609096!4m5!1s0x469942b9662fbb9f%3A0x90bb720f87f1b487!2z0L7Qt9C10YDQviDQr9C90LjRgdGK0Y_RgNCy0Lg!3m2!1d61.953398099999994!2d30.9832371!4m5!1s0x469912b4efa0ab9d%3A0x5dbf35432247775!2z0KXQsNGA0LvRgw!3m2!1d61.8099494!2d30.9377106!4m5!1s0x46997282f0b624bb%3A0xa94a2cef9dbae414!2z0KXQsNGD0LrQutCw0Y_RgNCy0Lgg0L7Qt9C10YDQvg!3m2!1d61.803788299999994!2d30.8415502!4m5!1s0x46999c08d058beb9%3A0xb1c61fa7374b7103!2z0L7Qt9C10YDQviDQn9C40YLQutGP0Y_RgNCy0Lg!3m2!1d61.603618399999995!2d30.4064917!4m5!1s0x4699726941a17ed1%3A0x5195ed8eb6124f7a!2z0L7Qt9C10YDQviDQoNC40YHRgtC40Y_RgNCy0Lg!3m2!1d61.799509699999994!2d30.767057899999998!4m5!1s0x46997259d66a307f%3A0xe53da5e85b869482!2z0JrQuNGA0YzRj9Cy0LDQu9Cw0YXRgtC4!3m2!1d61.7815817!2d30.781755099999998!4m5!1s0x4699653dd239fd8d%3A0x59b6e37b4b6ce7b3!2z0KHQvtGA0YLQsNCy0LDQu9Cw!3m2!1d61.706490599999995!2d30.697916!4m5!1s0x4696378cc74a65ed%3A0x6dc7673fab848eff!2z0KHQsNC90LrRgi3Qn9C10YLQtdGA0LHRg9GA0LM!3m2!1d59.9310584!2d30.3609096!5e0!3m2!1sru!2sru!4v1685107433209!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+					*так будет выглядеть Ваш маршрут при посещении всех возможных зон*
+				</div>
+				<div class="buttonbr">
+					<button type="submit" id="buto2" class="bron1" href="booking.html">ЗАБРОНИРОВАТЬ</button>
+				</div>
+				<script>
+					const but2=document.getElementById("buto2")
+					but2.addEventListener('click', function() {
+						if (zon21.checked) {
+							const formm=document.getElementById('marshf2');
+							const vybor1=document.getElementById('zon21');
+							formm.addEventListener('submit',function(e) {
+								e.preventDefault();
+								const vybor1value=vybor1.value;
+								localStorage.setItem('vybor1',vybor1value);
+								window.location.href="booking.html";
+							})
+						} else {
+							const formm=document.getElementById('marshf2');
+							const vybor1=document.getElementById('zon21');
+							formm.addEventListener('submit',function(e) {
+								e.preventDefault();
+								const vybor1value=vybor1.value;
+								localStorage.removeItem('vybor1');
+								window.location.href="booking.html";
+							})
+						}
+						if (zon22.checked) {
+							const formm=document.getElementById('marshf2');
+							const vybor2=document.getElementById('zon22');
+							formm.addEventListener('submit',function(e) {
+								e.preventDefault();
+								const vybor2value=vybor2.value;
+								localStorage.setItem('vybor2',vybor2value);
+								window.location.href="booking.html";
+							})
+						} else {
+							const formm=document.getElementById('marshf2');
+							const vybor1=document.getElementById('zon21');
+							formm.addEventListener('submit',function(e) {
+								e.preventDefault();
+								const vybor1value=vybor1.value;
+								localStorage.removeItem('vybor2');
+								window.location.href="booking.html";
+							})
+						}
+					})
+				</script>
+			</form>
+		</div>
+	</div>
+
+	<div class="boxmasrh">
+		<!-- patpl -->
+		<div class="filtermarsh patpl">
+			<div class="marshbg">
+				<div class="vmarsh1">
+					ВЫБРАННЫЙ МАРШРУТ:
+				</div>
+				<div class="nmarsh1">
+					"ТРОПАМИ ПЯТИГОРИИ"
+				</div>
+				<div class="dtmarsh1">
+					ДАТА ПОХОДА: 8 ИЮЛЯ - 13 ИЮЛЯ (6 дней и 5 ночей)
+				</div>
+				<div class="harder1">
+					СЛОЖНОСТЬ МАРШРУТА: СПЕЦИАЛИЗИРОВАННЫЙ УРОВЕНЬ
+				</div>
+			</div>
+			<form id="marshf3">
+				<div class="zons1">
+					<div class="marshvar1">ВЫБЕРИТЕ ЗОНЫ ДЛЯ ПОСЕЩЕНИЯ:</div>
+					<div class="m11">
+						<input id="zon31" type="checkbox" class="zona31" name="zon31" value="suvstan" checked="checked">
+						<label class="zonas11" for="zon31">Источники Суворовской станицы</label>
+						<img src="suvstan.jpg" alt="" class="imgsvits">
+						<div class="svitop">
+							С момента основания станица служила санитарным пропускником (её поначалу называли Карантинной). Здесь протекают реки Кума, Дарья, Тамлык, Гаркуша. В окрестностях имеются залежи термальных вод.
+						</div>
+					</div>
+					<div class="m11">
+						<input id="zon32" type="checkbox" class="zona32" name="zon32" value="malsed" checked="checked">
+						<label class="zonas11" for="zon32">Гора Малое Седло</label>
+						<img src="malsed.jpg" alt="" class="imgsvits">
+						<div class="svitop">
+							Природная достопримечательность и смотровая площадка, с которой открывается вид на Кисловодск. Ее высота составляет 1325 метров, в хорошую ясную погоду с вершины можно любоваться красотой могучего Эльбруса.
+						</div>
+					</div>
+				</div>
+				<div class="marsh1map">
+					<iframe class="marshmap1" src="https://www.google.com/maps/embed?pb=!1m76!1m12!1m3!1d367023.9094657616!2d42.56665508581409!3d44.05497918368978!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m61!3e2!4m5!1s0x4057a389051f9f15%3A0xce4d3adc1d5edab8!2z0JzQuNC90LXRgNCw0LvRjNC90YvQtSDQktC-0LTRiw!3m2!1d44.211675!2d43.1238527!4m5!1s0x4057762a50e3030d%3A0x5dad6f4a0bf09184!2z0J_Rj9GC0LjQs9C-0YDRgdC6!3m2!1d44.0498933!2d43.039636!4m5!1s0x405792ca910a9ad5%3A0x404523430d402c79!2z0KHRg9Cy0L7RgNC-0LLRgdC60LDRjw!3m2!1d44.1945318!2d42.6615444!4m5!1s0x4057760fb975b7bb%3A0x715a10b1c708df6d!2z0JzQsNGI0YPQuiwg0J_Rj9GC0LjQs9C-0YDRgdC6!3m2!1d44.050889!2d43.088833!4m5!1s0x40582b11dc088b79%3A0xc4f8d356612c05c8!2z0JrQuNGB0LvQvtCy0L7QtNGB0Lo!3m2!1d43.9055914!2d42.7159184!4m5!1s0x40582b28a2ff26f3%3A0x572172aeea5d1dbe!2z0JzQsNC70L7QtSDRgdC10LTQu9C-!3m2!1d43.898244!2d42.7586489!4m5!1s0x40579f07d2777f7d%3A0xdef3a9d9f6ddad17!2z0JbQtdC70LXQt9C90L7QstC-0LTRgdC6!3m2!1d44.1458333!2d42.998933199999996!4m5!1s0x405798954dc5c491%3A0x2c9e744b3081ac6b!2z0JPQvtGA0LAg0KDQsNC30LLQsNC70LrQsA!3m2!1d44.153055599999995!2d43.0344444!4m5!1s0x40579c341814dfef%3A0x4966d56752583b1a!2z0JHQtdGI0YLQsNGD!3m2!1d44.076839!2d43.0149!4m5!1s0x4057762a50e3030d%3A0x5dad6f4a0bf09184!2z0J_Rj9GC0LjQs9C-0YDRgdC6LCDQodGC0LDQstGA0L7Qv9C-0LvRjNGB0LrQuNC5INC60YDQsNC5!3m2!1d44.0498933!2d43.039636!5e0!3m2!1sru!2sru!4v1685110634495!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+					*так будет выглядеть Ваш маршрут при посещении всех возможных зон*
+				</div>
+				<div class="buttonbr">
+					<button type="submit" id="buto3" class="bron1" href="booking.html">ЗАБРОНИРОВАТЬ</button>
+				</div>
+				<script>
+					const but3=document.getElementById("buto3")
+					but3.addEventListener('click', function() {
+						if (zon31.checked) {
+							const formm=document.getElementById('marshf3');
+							const vybor1=document.getElementById('zon31');
+							formm.addEventListener('submit',function(e) {
+								e.preventDefault();
+								const vybor1value=vybor1.value;
+								localStorage.setItem('vybor1',vybor1value);
+								window.location.href="booking.html";
+							})
+						} else {
+							const formm=document.getElementById('marshf3');
+							const vybor1=document.getElementById('zon31');
+							formm.addEventListener('submit',function(e) {
+								e.preventDefault();
+								const vybor1value=vybor1.value;
+								localStorage.removeItem('vybor1');
+								window.location.href="booking.html";
+							})
+						}
+						if (zon32.checked) {
+							const formm=document.getElementById('marshf3');
+							const vybor2=document.getElementById('zon32');
+							formm.addEventListener('submit',function(e) {
+								e.preventDefault();
+								const vybor2value=vybor2.value;
+								localStorage.setItem('vybor2',vybor2value);
+								window.location.href="booking.html";
+							})
+						} else {
+							const formm=document.getElementById('marshf3');
+							const vybor1=document.getElementById('zon31');
+							formm.addEventListener('submit',function(e) {
+								e.preventDefault();
+								const vybor1value=vybor1.value;
+								localStorage.removeItem('vybor2');
+								window.location.href="booking.html";
+							})
+						}
+					})
+				</script>
+			</form>
+		</div>
+	</div>
+
+	<div class="boxmasrh">
+		<!-- kappl -->
+		<div class="filtermarsh kappl">
+			<div class="marshbg">
+				<div class="vmarsh1">
+					ВЫБРАННЫЙ МАРШРУТ:
+				</div>
+				<div class="nmarsh1">
+					"СТРАЖИ ДАЛЁКОГО ГОРОДА"
+				</div>
+				<div class="dtmarsh1">
+					ДАТА ПОХОДА: 10 ИЮЛЯ - 18 ИЮЛЯ (9 дней и 8 ночей)
+				</div>
+				<div class="harder1">
+					СЛОЖНОСТЬ МАРШРУТА: ВЫСШИЙ УРОВЕНЬ
+				</div>
+			</div>
+			<form id="marshf4">
+				<div class="zons1">
+					<div class="marshvar1">ВЫБЕРИТЕ ЗОНЫ ДЛЯ ПОСЕЩЕНИЯ:</div>
+					<div class="m11">
+						<input id="zon41" type="checkbox" class="zona41" name="zon41" value="vodspo" checked="checked">
+						<label class="zonas11" for="zon41">Водопад Спокойный</label>
+						<img src="vodspo.jpg" alt="" class="imgsvits">
+						<div class="svitop">
+							Расположен на одноименном ручье, берущем начало на северо-восточных склонах кальдеры вулкана Горелого и впадающем в р. Вилючу в среднем ее течении. Высота - 16 м, ширина отвесно падающего потока - 5-6 м.
+						</div>
+					</div>
+					<div class="m11">
+						<input id="zon42" type="checkbox" class="zona42" name="zon42" value="vulgor" checked="checked">
+						<label class="zonas11" for="zon42">Вулкан Горелый</label>
+						<img src="vulgor.jpg" alt="" class="imgsvits">
+						<div class="svitop">
+							Всю красоту "Горелого" можно ощутить, поднявшись к вершине, заглянув в его кратеры, которых выделяется более десятка. Наиболее интересны из них – кратеры «Голубое озеро» и «Активный».
+						</div>
+					</div>
+				</div>
+				<div class="marsh1map">
+					<iframe class="marshmap1" src="https://www.google.com/maps/embed?pb=!1m66!1m12!1m3!1d1232280.7519506472!2d156.7438969478132!3d52.89805429767079!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m51!3e2!4m5!1s0x58e1bff8c88f8763%3A0x37d858c050d596d2!2z0JXQu9C40LfQvtCy0L4sINCa0LDQvNGH0LDRgtGB0LrQuNC5INC60YDQsNC5!3m2!1d53.1890374!2d158.3825062!4m5!1s0x58e1b03b58feb6f9%3A0x346c1875b33f87d7!2z0J_QsNGA0LDRgtGD0L3QutCwLCDQmtCw0LzRh9Cw0YLRgdC60LjQuSDQutGA0LDQuQ!3m2!1d52.947444999999995!2d158.27311699999998!4m5!1s0x58e19f61535e73fd%3A0x6ae1129d1badfa0c!2z0KLRgNC4INCR0YDQsNGC0LAsINCa0LDQvNGH0LDRgtGB0LrQuNC5INC60YDQsNC5!3m2!1d52.893572799999994!2d158.7012102!4m3!3m2!1d52.5945593!2d158.0634419!4m5!1s0x58e0f00538c52e7d%3A0xcd6d5f34966355f1!2z0JPQvtGA0LXQu9GL0LksINCa0LDQvNGH0LDRgtGB0LrQuNC5INC60YDQsNC5!3m2!1d52.5575!2d158.0377777!4m5!1s0x58e184c6dfeee2cb%3A0xfd5779a6889dcbe8!2z0KXQsNC70LDQutGC0YvRgNGB0LrQuNC5INCf0LvRj9C2LCDQmtCw0LzRh9Cw0YLRgdC60LjQuSDQutGA0LDQuQ!3m2!1d52.999323399999994!2d158.86146639999998!4m3!3m2!1d53.3082973!2d158.5368527!4m5!1s0x58e199fa624a92cd%3A0x130f471bcd14a21!2z0J_QtdGC0YDQvtC_0LDQstC70L7QstGB0Lot0JrQsNC80YfQsNGC0YHQutC40Lk!3m2!1d53.058399699999995!2d158.6320734!4m5!1s0x58e1bff8c88f8763%3A0x37d858c050d596d2!2z0JXQu9C40LfQvtCy0L4sINCa0LDQvNGH0LDRgtGB0LrQuNC5INC60YDQsNC5!3m2!1d53.1890374!2d158.3825062!5e0!3m2!1sru!2sru!4v1685112761502!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+					*так будет выглядеть Ваш маршрут при посещении всех возможных зон*
+				</div>
+				<div class="buttonbr">
+					<button type="submit" id="buto4" class="bron1" href="booking.html">ЗАБРОНИРОВАТЬ</button>
+				</div>
+				<script>
+					const but4=document.getElementById("buto4")
+					but4.addEventListener('click', function() {
+						if (zon41.checked) {
+							const formm=document.getElementById('marshf4');
+							const vybor1=document.getElementById('zon41');
+							formm.addEventListener('submit',function(e) {
+								e.preventDefault();
+								const vybor1value=vybor1.value;
+								localStorage.setItem('vybor1',vybor1value);
+								window.location.href="booking.html";
+							})
+						} else {
+							const formm=document.getElementById('marshf4');
+							const vybor1=document.getElementById('zon41');
+							formm.addEventListener('submit',function(e) {
+								e.preventDefault();
+								const vybor1value=vybor1.value;
+								localStorage.removeItem('vybor1');
+								window.location.href="booking.html";
+							})
+						}
+						if (zon42.checked) {
+							const formm=document.getElementById('marshf4');
+							const vybor2=document.getElementById('zon42');
+							formm.addEventListener('submit',function(e) {
+								e.preventDefault();
+								const vybor2value=vybor2.value;
+								localStorage.setItem('vybor2',vybor2value);
+								window.location.href="booking.html";
+							})
+						} else {
+							const formm=document.getElementById('marshf4');
+							const vybor1=document.getElementById('zon41');
+							formm.addEventListener('submit',function(e) {
+								e.preventDefault();
+								const vybor1value=vybor1.value;
+								localStorage.removeItem('vybor2');
+								window.location.href="booking.html";
+							})
+						}
+					})
+				</script>
+			</form>
+		</div>
+	</div>
+
+	<script src="script2.js"></script>
+
+	<div class="fouter">
+		<div class="fouternum">
+			ТЕЛЕФОН ДЛЯ СВЯЗИ: +7(812) ХХХ-ХХ-ХХ 
+		</div>
+		<div class="foutero">
+			изображения взяты от storyset на Freepik
+		</div>
+	</div>
+
+</body>
+</html>

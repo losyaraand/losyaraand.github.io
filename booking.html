@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<link rel='stylesheet' href='style.css'>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed:wght@400;500;800&display=swap" rel="stylesheet">
+	<title>ТуристPro - бронирование</title>
+</head>
+<body>
+    
+    <script>
+		const value1=localStorage.getItem('vybor1');
+        const value2=localStorage.getItem('vybor2');
+	</script>
+    
+
+    <div class='header'>
+		<div class='container'>
+			<div class='header-line'>
+				<div class='header-logo'>
+					<img src="logo.png" alt="" class="logo">
+				</div>
+				
+				<div class='navs'>
+					<a class='nav-items' href="index.html">ГЛАВНАЯ</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+    <div class="info">
+        <div class="zakazinfo">
+            ДАННЫЕ ВАШЕГО ЗАКАЗА
+        </div>
+        <div class="nregionbooks">
+            РЕГИОН
+        </div>
+        <form id="regionbooks">
+            РЕГИОН
+        </form>
+        <script>
+            var vor="voronejpl", car="careliapl", pat="patpl", kap="kappl";
+            const book=localStorage.getItem('placeend');
+            const regionbook=document.querySelector('#regionbooks');
+            if (book==vor) {
+                regionbook.innerHTML='<div class="bookregion1">ЦЕНТРАЛЬНЫЙ ФЕДЕРАЛЬНЫЙ ОКРУГ</div>';
+            }
+            if (book==car) {
+                regionbook.innerHTML='<div class="bookregion1">СЕВЕРО-ЗАПАДНЫЙ ФЕДЕРАЛЬНЫЙ ОКРУГ</div>';
+            }
+            if (book==pat) {
+                regionbook.innerHTML='<div class="bookregion1">ЮЖНЫЙ ФЕДЕРАЛЬНЫЙ ОКРУГ</div>';
+            }
+            if (book==kap) {
+                regionbook.innerHTML='<div class="bookregion1">ДАЛЬНЕВОСТОЧНЫЙ ФЕДЕРАЛЬНЫЙ ОКРУГ</div>';
+            }
+        </script>
+        <div class="nmarshbooks">
+            НАИМЕНОВАНИЕ МАРШРУТА
+        </div>
+        <form id="marshbooks">
+            НАИМЕНОВАНИЕ МАРШРУТА
+        </form>
+        <script>
+            var vor="voronejpl", car="careliapl", pat="patpl", kap="kappl";
+            const bookm=localStorage.getItem('placeend');
+            const marshbook=document.querySelector('#marshbooks');
+            if (bookm==vor) {
+                marshbook.innerHTML='<div class="marshregion1">"ПОИСК НАСТОЯЩИХ СОКРОВИЩ"</div>';
+            }
+            if (bookm==car) {
+                marshbook.innerHTML='<div class="marshregion1">"ПЁТСЁВААРА - ЦАРСТВО ГОРНЫХ ТРОЛЛЕЙ"Г</div>';
+            }
+            if (bookm==pat) {
+                marshbook.innerHTML='<div class="marshregion1">"ТРОПАМИ ПЯТИГОРИИ"</div>';
+            }
+            if (bookm==kap) {
+                marshbook.innerHTML='<div class="marshregion1">"СТРАЖИ ДАЛЁКОГО ГОРОДА"</div>';
+            }
+        </script>
+        <div class="nvarbooks">
+            ВЫБРАННЫЕ ЗОНЫ ДЛЯ ПОСЕЩЕНИЯ
+        </div>
+        <form id="varbooks">
+            ВЫБРАННЫЕ ЗОНЫ ДЛЯ ПОСЕЩЕНИЯ
+        </form>
+        <script>
+            var svitn="svit", shatrn="shatr", hackn="hack", kiryan="kirya", suvstann="suvstan", malsedn="malsed", vodspon="vodspo", vulgorn="vulgor";
+            const varbook=document.querySelector('#varbooks');
+            const vyb1=localStorage.getItem('vybor1');
+            const vyb2=localStorage.getItem('vybor2')
+            if (vyb1!==null) {
+                if (vyb1==svitn) {
+                varbook.innerHTML='<div class="marshvybor1">СВИТСКИЙ КОРПУС</div>';
+                }
+                if (vyb1==hackn) {
+                varbook.innerHTML='<div class="marshvybor1">ОЗЕРО ХАУККАЯРВИ</div>';
+                }
+                if (vyb1==suvstann) {
+                varbook.innerHTML='<div class="marshvybor1">ИСТОЧНИКИ СУВОРОВСКОЙ СТАНИЦЫ</div>';
+                }
+                if (vyb1==vodspon) {
+                varbook.innerHTML='<div class="marshvybor1">ВОДОПАД СПОКОЙНЫЙ</div>';
+                }
+            }
+            if (vyb2!==null) {
+                if (vyb2==shatrn) {
+                varbook.innerHTML='<div class="marshvybor1">ШАТРИЩЕ</div>';
+                }
+                if (vyb2==kiryan) {
+                varbook.innerHTML='<div class="marshvybor1">ПОСЁЛОК КИРЬЯВАЛАХТИ</div>';
+                }
+                if (vyb2==malsedn) {
+                varbook.innerHTML='<div class="marshvybor1">ГОРА МАЛОЕ СЕДЛО</div>';
+                }
+                if (vyb2==vulgorn) {
+                varbook.innerHTML='<div class="marshvybor1">ВУЛКАН ГОРЕЛЫЙ</div>';
+                }
+            }
+            if ((vyb1!==null)&&(vyb2!==null)) {
+                if ((vyb1==svitn)&&(vyb2==shatrn)) {
+                    varbook.innerHTML='<div class="marshvybor1">СВИТСКИЙ КОРПУС<br>ШАТРИЩЕ</div>';
+                }
+                if ((vyb1==hackn)&&(vyb2==kiryan)) {
+                    varbook.innerHTML='<div class="marshvybor1">ОЗЕРО ХАУККАЯРВИ<br>ПОСЁЛОК КИРЬЯВАЛАХТИ</div>';
+                }
+                if ((vyb1==suvstann)&&(vyb2==malsedn)) {
+                    varbook.innerHTML='<div class="marshvybor1">ИСТОЧНИКИ СУВОРОВСКОЙ СТАНИЦЫ<br>ГОРА МАЛОЕ СЕДЛО</div>';
+                }
+                if ((vyb1==vodspon)&&(vyb2==vulgorn)) {
+                    varbook.innerHTML='<div class="marshvybor1">ВОДОПАД СПОКОЙНЫЙ<br>ВУЛКАН ГОРЕЛЫЙ</div>';
+                }
+            }
+            if ((vyb1==null)&&(vyb2==null)) {
+                varbook.innerHTML='<div class="marshvybor1">ДОПОЛНИТЕЛЬНЫЕ ЗОНЫ НЕ ВЫБРАНЫ</div>';
+            }
+        </script>
+        <div class="start">
+            <div class="marshdtst">
+                ПРЕДПОЛАГАЕМОЕ НАЧАЛО ОТДЫХА
+            </div>
+            <div class="stdtbook">
+                <form id="stbooks">
+                    ПРЕДПОЛАГАЕМОЕ НАЧАЛО ОТДЫХА
+                </form>
+            </div>
+            <script>
+                const bookst=localStorage.getItem('startdt')
+                const stbook=document.querySelector('#stbooks');
+                stbook.innerHTML=bookst;
+            </script>
+        </div>
+        <div class="end">
+            <div class="marshdtend">
+                ПРЕДПОЛАГАЕМОЕ ОКОНЧАНИЕ ОТДЫХА
+            </div>
+            <div class="enddtbook">
+                <form id="endbooks">
+                    ПРЕДПОЛАГАЕМОЕ ОКОНЧАНИЕ ОТДЫХА
+                </form>
+            </div>
+            <script>
+                const bookend=localStorage.getItem('enddt')
+                const endbook=document.querySelector('#endbooks');
+                endbook.innerHTML=bookend;
+            </script>
+        </div>
+        <div class="marshppl">
+            КОЛИЧЕСТВО ЧЕЛОВЕК
+        </div>
+        <div class="pplbook">
+            <form id="pplbooks">
+                КОЛИЧЕСТВО ЧЕЛОВЕК
+            </form>
+        </div>
+        <script>
+            const bookppl=localStorage.getItem('countppl')
+            const pepbook=document.querySelector('#pplbooks');
+            pepbook.innerHTML=bookppl;
+        </script>
+        <div class="price">
+            ПРИМЕРНАЯ СТОИМОСТЬ ОТДЫХА
+        </div>
+        <div class="pprice">
+            <div id="pribo">
+                58 000 ₽
+            </div>
+            <script>
+                var vor="voronejpl", car="careliapl", pat="patpl", kap="kappl";
+                const bookp=localStorage.getItem('placeend');
+                const pbook=document.querySelector('#pribo');
+                if (bookp==vor) {
+                    pbook.innerHTML='<div class="marshvybor2">58 000 ₽</div>';
+                }
+                if (bookp==car) {
+                    pbook.innerHTML='<div class="marshvybor2">30 000 ₽</div>';
+                }
+                if (bookp==pat) {
+                    pbook.innerHTML='<div class="marshvybor2">72 000 ₽</div>';
+                }
+                if (bookp==kap) {
+                    pbook.innerHTML='<div class="marshvybor2">95 000 ₽</div>';
+                }
+            </script>
+        </div>
+        <div class="dop">
+            <div class="ndop">
+                ВЫБОР ДОПОЛНИТЕЛЬНЫХ УСЛУГ
+            </div>
+            <form id="vdop">
+                <div class="formdop">
+                    <input id="vdop11" type="checkbox" class="vdop11v" name="vdopv11" value="provodnik" checked="checked" onclick="summa()">
+                    <label class="nvdop11" for="vdopv11">УСЛУГИ ПРОВОДНИКА</label><br>
+                    <input id="vdop12" type="checkbox" class="vdop12v" name="vdopv12" value="instr" checked="checked" onclick="summa()">
+                    <label class="nvdop12" for="vdopv12">УСЛУГИ АРЕДЫ ТУРИСТИЧЕСКОГО ОБОРУДОВАНИЯ</label><br>
+                    <input id="vdop13" type="checkbox" class="vdop13v" name="vdopv13" value="photo" checked="checked" onclick="summa()">
+                    <label class="nvdop13" for="vdopv13">УСЛУГИ ФОТОГРАФА/ВИДЕООПЕРАТОРА</label><br>
+                    <input id="vdop14" type="checkbox" class="vdop14v" name="vdopv14" value="dead" checked="checked" onclick="summa()">
+                    <label class="nvdop14" for="vdopv14">СТРАХОВАНИЕ ОТ НЕСЧАСТНЫХ СЛУЧАЕВ</label><br>
+                </div>
+
+                <div class="comdiv">
+                    <label class="comzak">КОММЕНТАРИЙ К ЗАКАЗУ</label>
+                    <input id="comm" type="text" name="commv"><br>
+                </div>
+
+                <div class="comdiv">
+                    <label class="poctzak">ПОЧТОВЫЙ ЯЩИК</label>
+                    <input id="pochta" type="email" name="address"><br>
+                </div>
+
+                <div class="itogo">
+                    ИТОГОВАЯ СТОИМОСТЬ
+                </div>
+                <div class="itogsum">
+                    <div id="itosu">
+                        128 000 ₽
+                    </div>
+                </div>
+                <script>
+                    var vor="voronejpl", car="careliapl", pat="patpl", kap="kappl";
+                    const bookpat=localStorage.getItem('placeend');
+                    const plat=document.querySelector('#itosu');
+                    if (bookpat==vor) {
+                        plat.innerHTML='<div class="marshvybor2">128 000 ₽</div>';
+                    }
+                    if (bookpat==car) {
+                        plat.innerHTML='<div class="marshvybor2">100 000 ₽</div>';
+                    }
+                    if (bookpat==pat) {
+                        plat.innerHTML='<div class="marshvybor2">142 000 ₽</div>';
+                    }
+                    if (bookpat==kap) {
+                        plat.innerHTML='<div class="marshvybor2">165 000 ₽</div>';
+                    }
+                    // var vor="voronejpl", car="careliapl", pat="patpl", kap="kappl";
+                    // const plat=document.querySelector('#itosu');
+                    // const bookpat=localStorage.getItem('placeend');
+                    // if (bookpat==vor) {
+                    //     plat.innerHTML='58 000 ₽';
+                    // }
+                    // if (bookpat==vor) {
+                    //     plat.innerHTML='30 000 ₽';
+                    // }
+                    // if (bookpat==vor) {
+                    //     plat.innerHTML='72 000 ₽';
+                    // }
+                    // if (bookpat==vor) {
+                    //     plat.innerHTML='95 000 ₽';
+                    // }
+                </script>
+                <script>
+                    const sumit1=58, sumit2=30, sumit3=72, sumit4=95, s1=10, s2=15, s3=25, s4=20;
+                    var chbox1, chbox2, chbox3, chbox4;
+                    var vor="voronejpl", car="careliapl", pat="patpl", kap="kappl";
+                    const vbok11=document.querySelector('.itogsum');
+                    const bookpa=localStorage.getItem('placeend');
+                    function summa() {
+                        chbox1=document.getElementById('vdop11');
+                        chbox2=document.getElementById('vdop12');
+                        chbox3=document.getElementById('vdop13');
+                        chbox4=document.getElementById('vdop14');
+                        if (bookpa==vor) {
+                            if ((chbox1.checked)&&(chbox2.checked)&&(chbox3.checked)&&(chbox4.checked)) {
+                                vbok11.innerHTML=sumit1+s1+s2+s3+s4+' 000 ₽';
+                            }
+                            if (!(chbox1.checked)&&(chbox2.checked)&&(chbox3.checked)&&(chbox4.checked)) {
+                                vbok11.innerHTML=sumit1+s2+s3+s4+' 000 ₽';
+                            }
+                            if ((chbox1.checked)&&!(chbox2.checked)&&(chbox3.checked)&&(chbox4.checked)) {
+                                vbok11.innerHTML=sumit1+s1+s3+s4+' 000 ₽';
+                            }
+                            if ((chbox1.checked)&&(chbox2.checked)&&!(chbox3.checked)&&(chbox4.checked)) {
+                                vbok11.innerHTML=sumit1+s2+s1+s4+' 000 ₽';
+                            }
+                            if ((chbox1.checked)&&(chbox2.checked)&&(chbox3.checked)&&!(chbox4.checked)) {
+                                vbok11.innerHTML=sumit1+s2+s3+s1+' 000 ₽';
+                            }
+                            if ((chbox1.checked)&&(chbox2.checked)&&!(chbox3.checked)&&!(chbox4.checked)) {
+                                vbok11.innerHTML=sumit1+s2+s1+' 000 ₽';
+                            }
+                            if (!(chbox1.checked)&&(chbox2.checked)&&(chbox3.checked)&&!(chbox4.checked)) {
+                                vbok11.innerHTML=sumit1+s2+s3+' 000 ₽';
+                            }
+                            if (!(chbox1.checked)&&!(chbox2.checked)&&(chbox3.checked)&&(chbox4.checked)) {
+                                vbok11.innerHTML=sumit1+s3+s4+' 000 ₽';
+                            }
+                            if ((chbox1.checked)&&!(chbox2.checked)&&!(chbox3.checked)&&(chbox4.checked)) {
+                                vbok11.innerHTML=sumit1+s4+s1+' 000 ₽';
+                            }
+                            if ((chbox1.checked)&&!(chbox2.checked)&&(chbox3.checked)&&!(chbox4.checked)) {
+                                vbok11.innerHTML=sumit1+s3+s1+' 000 ₽';
+                            }
+                            if (!(chbox1.checked)&&(chbox2.checked)&&!(chbox3.checked)&&(chbox4.checked)) {
+                                vbok11.innerHTML=sumit1+s2+s4+' 000 ₽';
+                            }
+                            if ((chbox1.checked)&&!(chbox2.checked)&&!(chbox3.checked)&&!(chbox4.checked)) {
+                                vbok11.innerHTML=sumit1+s1+' 000 ₽';
+                            }
+                            if (!(chbox1.checked)&&(chbox2.checked)&&!(chbox3.checked)&&!(chbox4.checked)) {
+                                vbok11.innerHTML=sumit1+s2+' 000 ₽';
+                            }
+                            if (!(chbox1.checked)&&!(chbox2.checked)&&(chbox3.checked)&&!(chbox4.checked)) {
+                                vbok11.innerHTML=sumit1+s3+' 000 ₽';
+                            }
+                            if (!(chbox1.checked)&&!(chbox2.checked)&&!(chbox3.checked)&&(chbox4.checked)) {
+                                vbok11.innerHTML=sumit1+s4+' 000 ₽';
+                            }
+                            if (!(chbox1.checked)&&!(chbox2.checked)&&!(chbox3.checked)&&(!chbox4.checked)) {
+                                vbok11.innerHTML=sumit1+' 000 ₽';
+                            }
+                        }
+                        if (bookpa==car) {
+                            if ((chbox1.checked)&&(chbox2.checked)&&(chbox3.checked)&&(chbox4.checked)) {
+                                vbok11.innerHTML=sumit2+s1+s2+s3+s4+' 000 ₽';
+                            }
+                            if (!(chbox1.checked)&&(chbox2.checked)&&(chbox3.checked)&&(chbox4.checked)) {
+                                vbok11.innerHTML=sumit2+s2+s3+s4+' 000 ₽';
+                            }
+                            if ((chbox1.checked)&&!(chbox2.checked)&&(chbox3.checked)&&(chbox4.checked)) {
+                                vbok11.innerHTML=sumit2+s1+s3+s4+' 000 ₽';
+                            }
+                            if ((chbox1.checked)&&(chbox2.checked)&&!(chbox3.checked)&&(chbox4.checked)) {
+                                vbok11.innerHTML=sumit2+s2+s1+s4+' 000 ₽';
+                            }
+                            if ((chbox1.checked)&&(chbox2.checked)&&(chbox3.checked)&&!(chbox4.checked)) {
+                                vbok11.innerHTML=sumit2+s2+s3+s1+' 000 ₽';
+                            }
+                            if ((chbox1.checked)&&(chbox2.checked)&&!(chbox3.checked)&&!(chbox4.checked)) {
+                                vbok11.innerHTML=sumit2+s2+s1+' 000 ₽';
+                            }
+                            if (!(chbox1.checked)&&(chbox2.checked)&&(chbox3.checked)&&!(chbox4.checked)) {
+                                vbok11.innerHTML=sumit2+s2+s3+' 000 ₽';
+                            }
+                            if (!(chbox1.checked)&&!(chbox2.checked)&&(chbox3.checked)&&(chbox4.checked)) {
+                                vbok11.innerHTML=sumit2+s3+s4+' 000 ₽';
+                            }
+                            if ((chbox1.checked)&&!(chbox2.checked)&&!(chbox3.checked)&&(chbox4.checked)) {
+                                vbok11.innerHTML=sumit2+s4+s1+' 000 ₽';
+                            }
+                            if ((chbox1.checked)&&!(chbox2.checked)&&(chbox3.checked)&&!(chbox4.checked)) {
+                                vbok11.innerHTML=sumit2+s3+s1+' 000 ₽';
+                            }
+                            if (!(chbox1.checked)&&(chbox2.checked)&&!(chbox3.checked)&&(chbox4.checked)) {
+                                vbok11.innerHTML=sumit2+s2+s4+' 000 ₽';
+                            }
+                            if ((chbox1.checked)&&!(chbox2.checked)&&!(chbox3.checked)&&!(chbox4.checked)) {
+                                vbok11.innerHTML=sumit2+s1+' 000 ₽';
+                            }
+                            if (!(chbox1.checked)&&(chbox2.checked)&&!(chbox3.checked)&&!(chbox4.checked)) {
+                                vbok11.innerHTML=sumit2+s2+' 000 ₽';
+                            }
+                            if (!(chbox1.checked)&&!(chbox2.checked)&&(chbox3.checked)&&!(chbox4.checked)) {
+                                vbok11.innerHTML=sumit2+s3+' 000 ₽';
+                            }
+                            if (!(chbox1.checked)&&!(chbox2.checked)&&!(chbox3.checked)&&(chbox4.checked)) {
+                                vbok11.innerHTML=sumit2+s4+' 000 ₽';
+                            }
+                            if (!(chbox1.checked)&&!(chbox2.checked)&&!(chbox3.checked)&&(!chbox4.checked)) {
+                                vbok11.innerHTML=sumit2+' 000 ₽';
+                            }
+                        }
+                        if (bookpa==pat) {
+                            if ((chbox1.checked)&&(chbox2.checked)&&(chbox3.checked)&&(chbox4.checked)) {
+                                vbok11.innerHTML=sumit3+s1+s2+s3+s4+' 000 ₽';
+                            }
+                            if (!(chbox1.checked)&&(chbox2.checked)&&(chbox3.checked)&&(chbox4.checked)) {
+                                vbok11.innerHTML=sumit3+s2+s3+s4+' 000 ₽';
+                            }
+                            if ((chbox1.checked)&&!(chbox2.checked)&&(chbox3.checked)&&(chbox4.checked)) {
+                                vbok11.innerHTML=sumit3+s1+s3+s4+' 000 ₽';
+                            }
+                            if ((chbox1.checked)&&(chbox2.checked)&&!(chbox3.checked)&&(chbox4.checked)) {
+                                vbok11.innerHTML=sumit3+s2+s1+s4+' 000 ₽';
+                            }
+                            if ((chbox1.checked)&&(chbox2.checked)&&(chbox3.checked)&&!(chbox4.checked)) {
+                                vbok11.innerHTML=sumit3+s2+s3+s1+' 000 ₽';
+                            }
+                            if ((chbox1.checked)&&(chbox2.checked)&&!(chbox3.checked)&&!(chbox4.checked)) {
+                                vbok11.innerHTML=sumit3+s2+s1+' 000 ₽';
+                            }
+                            if (!(chbox1.checked)&&(chbox2.checked)&&(chbox3.checked)&&!(chbox4.checked)) {
+                                vbok11.innerHTML=sumit3+s2+s3+' 000 ₽';
+                            }
+                            if (!(chbox1.checked)&&!(chbox2.checked)&&(chbox3.checked)&&(chbox4.checked)) {
+                                vbok11.innerHTML=sumit3+s3+s4+' 000 ₽';
+                            }
+                            if ((chbox1.checked)&&!(chbox2.checked)&&!(chbox3.checked)&&(chbox4.checked)) {
+                                vbok11.innerHTML=sumit3+s4+s1+' 000 ₽';
+                            }
+                            if ((chbox1.checked)&&!(chbox2.checked)&&(chbox3.checked)&&!(chbox4.checked)) {
+                                vbok11.innerHTML=sumit3+s3+s1+' 000 ₽';
+                            }
+                            if (!(chbox1.checked)&&(chbox2.checked)&&!(chbox3.checked)&&(chbox4.checked)) {
+                                vbok11.innerHTML=sumit3+s2+s4+' 000 ₽';
+                            }
+                            if ((chbox1.checked)&&!(chbox2.checked)&&!(chbox3.checked)&&!(chbox4.checked)) {
+                                vbok11.innerHTML=sumit3+s1+' 000 ₽';
+                            }
+                            if (!(chbox1.checked)&&(chbox2.checked)&&!(chbox3.checked)&&!(chbox4.checked)) {
+                                vbok11.innerHTML=sumit3+s2+' 000 ₽';
+                            }
+                            if (!(chbox1.checked)&&!(chbox2.checked)&&(chbox3.checked)&&!(chbox4.checked)) {
+                                vbok11.innerHTML=sumit3+s3+' 000 ₽';
+                            }
+                            if (!(chbox1.checked)&&!(chbox2.checked)&&!(chbox3.checked)&&(chbox4.checked)) {
+                                vbok11.innerHTML=sumit3+s4+' 000 ₽';
+                            }
+                            if (!(chbox1.checked)&&!(chbox2.checked)&&!(chbox3.checked)&&(!chbox4.checked)) {
+                                vbok11.innerHTML=sumit3+' 000 ₽';
+                            }
+                        }
+                        if (bookpa==kap) {
+                            if ((chbox1.checked)&&(chbox2.checked)&&(chbox3.checked)&&(chbox4.checked)) {
+                                vbok11.innerHTML=sumit4+s1+s2+s3+s4+' 000 ₽';
+                            }
+                            if (!(chbox1.checked)&&(chbox2.checked)&&(chbox3.checked)&&(chbox4.checked)) {
+                                vbok11.innerHTML=sumit4+s2+s3+s4+' 000 ₽';
+                            }
+                            if ((chbox1.checked)&&!(chbox2.checked)&&(chbox3.checked)&&(chbox4.checked)) {
+                                vbok11.innerHTML=sumit4+s1+s3+s4+' 000 ₽';
+                            }
+                            if ((chbox1.checked)&&(chbox2.checked)&&!(chbox3.checked)&&(chbox4.checked)) {
+                                vbok11.innerHTML=sumit4+s2+s1+s4+' 000 ₽';
+                            }
+                            if ((chbox1.checked)&&(chbox2.checked)&&(chbox3.checked)&&!(chbox4.checked)) {
+                                vbok11.innerHTML=sumit4+s2+s3+s1+' 000 ₽';
+                            }
+                            if ((chbox1.checked)&&(chbox2.checked)&&!(chbox3.checked)&&!(chbox4.checked)) {
+                                vbok11.innerHTML=sumit4+s2+s1+' 000 ₽';
+                            }
+                            if (!(chbox1.checked)&&(chbox2.checked)&&(chbox3.checked)&&!(chbox4.checked)) {
+                                vbok11.innerHTML=sumit4+s2+s3+' 000 ₽';
+                            }
+                            if (!(chbox1.checked)&&!(chbox2.checked)&&(chbox3.checked)&&(chbox4.checked)) {
+                                vbok11.innerHTML=sumit4+s3+s4+' 000 ₽';
+                            }
+                            if ((chbox1.checked)&&!(chbox2.checked)&&!(chbox3.checked)&&(chbox4.checked)) {
+                                vbok11.innerHTML=sumit4+s4+s1+' 000 ₽';
+                            }
+                            if ((chbox1.checked)&&!(chbox2.checked)&&(chbox3.checked)&&!(chbox4.checked)) {
+                                vbok11.innerHTML=sumit4+s3+s1+' 000 ₽';
+                            }
+                            if (!(chbox1.checked)&&(chbox2.checked)&&!(chbox3.checked)&&(chbox4.checked)) {
+                                vbok11.innerHTML=sumit4+s2+s4+' 000 ₽';
+                            }
+                            if ((chbox1.checked)&&!(chbox2.checked)&&!(chbox3.checked)&&!(chbox4.checked)) {
+                                vbok11.innerHTML=sumit4+s1+' 000 ₽';
+                            }
+                            if (!(chbox1.checked)&&(chbox2.checked)&&!(chbox3.checked)&&!(chbox4.checked)) {
+                                vbok11.innerHTML=sumit4+s2+' 000 ₽';
+                            }
+                            if (!(chbox1.checked)&&!(chbox2.checked)&&(chbox3.checked)&&!(chbox4.checked)) {
+                                vbok11.innerHTML=sumit4+s3+' 000 ₽';
+                            }
+                            if (!(chbox1.checked)&&!(chbox2.checked)&&!(chbox3.checked)&&(chbox4.checked)) {
+                                vbok11.innerHTML=sumit4+s4+' 000 ₽';
+                            }
+                            if (!(chbox1.checked)&&!(chbox2.checked)&&!(chbox3.checked)&&(!chbox4.checked)) {
+                                vbok11.innerHTML=sumit4+' 000 ₽';
+                            }
+                        }
+                    }
+                </script>
+                <div class="buttonbook">
+                    <button type="submit" onclick="alert('Благодарим за бронирование! Скоро мы свяжемся с Вами!')" class="bookbt" href="search.html">ЗАБРОНИРОВАТЬ</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="fouter">
+		<div class="fouternum">
+			ТЕЛЕФОН ДЛЯ СВЯЗИ: +7(812) ХХХ-ХХ-ХХ 
+		</div>
+		<div class="foutero">
+			изображения взяты от storyset на Freepik
+		</div>
+	</div>
+</body>
+</html>

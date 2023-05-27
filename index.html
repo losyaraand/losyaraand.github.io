@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<link rel='stylesheet' href='style.css'>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed:wght@400;500;800&display=swap" rel="stylesheet">
+	<title>ТуристPro - туристические походы любой сложности!</title>
+</head>
+
+<body>
+	
+	<div class='header'>
+		<div class='container'>
+			<div class='header-line'>
+				<div class='header-logo'>
+					<img src="logo.png" alt="" class="logo">
+				</div>
+				
+				<div class='nav'>
+					<a class='nav-item' href="#saleshref">АКЦИИ</a>
+					<a class='nav-item' href="#searchhref">ПОИСК</a>
+					<a class='nav-item' href="#">УПРАВЛЕНИЕ БРОНИРОВАНИЕМ</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="etaps">
+		<div class="stepsbg">
+			<div class="steps">
+				ЭТАПЫ БРОНИРОВАНИЯ
+			</div>
+
+			<div class="step">
+				<div class="mainstep">
+					<div class="step1">
+						1<br>выбрать даты предполагаемого отдыха
+					</div>
+				</div>
+
+			<div class="mainstep">
+				<div class="step2">
+					2<br>указать количество участников и их уровень подготовки
+				</div>
+			</div>
+
+			<div class="mainstep">
+				<div class="step3">
+					3<br>выбрать желаемый регион для отдыха
+				</div>
+			</div>
+
+			<div class="mainstep">
+				<div class="step4">
+					4<br>зарезервировать конкретные зоны, которые будут включены в обязательное посещение
+				</div>
+			</div>
+
+			<div class="mainstep">
+				<div class="step5">
+					5<br>определить перечень дополнительных услуг
+				</div>
+			</div>
+
+			<div class="mainstep">
+				<div class="step6">
+					6<br>оформить заказ
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+
+	<div class="blcompany">
+		<div class="titlecom">
+			НАША КОМПАНИЯ
+		</div>
+		<div class="opcom">
+			Главная цель компании – сделать любой отдых удобным, комфортным и безопасным.<br>Предлагаем Вам множество увлекательных туров по России и зарубежью, подберем для Вас лучшие варианты отдыха, организуем для Вас индивидуальные или групповые классические и экскурсионные туры.
+		</div>
+		<div class="deviz">
+			Девиз "ТуристPRO" - исполнить мечты просто!
+		</div>
+		<div class="otzyv">
+			ОТЗЫВЫ КЛИЕНТОВ
+		</div>
+		<div class="mainmarks">
+			<div class="marks">
+				Александра<br><br>Это было превосходное путешествие - незабываемые ощущения, волшебные пейзажи, удивительные истории гида!
+			</div>
+			<div class="marks">
+				Ольга<br><br>Давно хотела устроить долгую прогулку себе и своим близким - не пожалела, выбрав именно эту компанию.
+			</div>
+			<div class="marks">
+				Аля<br><br>Навсегда запомню эти несколько дней! Виды природы поражают до глубины души, очень захватывающе. Всем советую!
+			</div>
+		</div>
+	</div>
+
+	<div class="mainmarsh" id="searchhref">
+		<div class="searchm">
+			<form id="form">
+				<div id="search">ПОИСК МАРШРУТА</div>
+					<div class="buttonform1">
+						<label id="regions">ВЫБОР РЕГИОНА</label>
+						<select id="region" autocomplete="off">
+							<option value="cfo">Центральный федеральный округ</option>
+							<option value="szfo">Северо-Западный федеральный округ</option>
+							<option value="ufo">Южный федеральный округ</option>
+							<option value="pfo">Приволжский федеральный округ</option>
+							<option value="yfo">Уральский федеральный округ</option>
+							<option value="sfo">Сибирский федеральный округ</option>
+							<option value="dfo">Дальневосточный федеральный округ</option>
+						</select>
+					</div>
+					
+					<div class="buttonform2">
+						<label>ПРЕДПОЛАГАЕМОЕ НАЧАЛО ОТДЫХА</label>
+						<input id="startdt" type="date" name="startdate">
+					</div>
+
+					<div class="buttonform3">
+						<label>ПРЕДПОЛАГАЕМОЕ ОКОНЧАНИЕ ОТДЫХА</label>
+						<input id="enddt" type="date" name="enddate">
+					</div>
+					
+					<div class="buttonform4">
+						<label>КОЛИЧЕСТВО УЧАСТНИКОВ</label>
+						<input id="countppl" type="number" name="count">
+					</div>
+					
+					<!-- <div class="buttonform5">
+						<label for="level">УРОВЕНЬ ПОДГОТОВКИ</label>
+						<select id="level">
+							<option value="new">Начальный уровень</option>
+							<option value="base">Базовый уровень</option>
+							<option value="spec">Специализированный уровень</option>
+							<option value="hight">Высший уровень</option>
+						</select>
+					</div> -->
+					
+					<div class="buttonop">
+						<button type="submit" class="searchbt" href="search.html">ПОИСК</button>
+					</div>
+
+					<script>
+						const form=document.getElementById('form');
+						const region=document.getElementById('region');
+						const startdt=document.getElementById('startdt');
+						const enddt=document.getElementById('enddt');
+						const countppl=document.getElementById('countppl');
+						// const level=document.getElementById('level');
+
+						form.addEventListener('submit',function(e) {
+							e.preventDefault();
+							const regionvalue=region.value;
+							const startdtvalue=startdt.value;
+							const enddtvalue=enddt.value;
+							const countpplvalue=countppl.value;
+							// const levelvalue=level.value;
+
+							localStorage.setItem('region',regionvalue);
+							localStorage.setItem('startdt',startdtvalue);
+							localStorage.setItem('enddt',enddtvalue);
+							localStorage.setItem('countppl',countpplvalue);
+							// localStorage.setItem('level',levelvalue);
+
+							window.location.href="search.html";
+						})
+
+					</script>
+			</form>
+		</div>
+	</div>
+
+	<div class="sales">
+		<div class="sale" id="saleshref">
+			АКЦИИ
+		</div>
+
+		<div class="sale1">
+			<div class="nsale">
+				ТОВАРИЩЕСТВО
+			</div>
+			<div class="osale">
+				соберите туристическую группу из 5-ти и более человек и получите скидку на всё 15%
+			</div>
+			<div class="isale">
+				<img src="sale1.jpg" alt="" class="people-img">
+			</div>
+			<div class="bsale">
+				<button class="buttonsale" href="#" onclick="alert('Акции находятся в стадии планирования. В ближайшем будущем они будут доступны. Благодарим за понимание.')">ПОДРОБНЕЕ</button>
+			</div>
+		</div>
+
+		<div class="sale2">
+			<div class="nsale">
+				ПУТЬ ВОДЫ
+			</div>
+			<div class="osale">
+				постройте маршрут вдоль озера/реки и получите скидку на всё 5%
+			</div>
+			<div class="isale">
+				<img src="sale2.jpg" alt="" class="people-img">
+			</div>
+			<div class="bsale">
+				<button class="buttonsale" href="#" onclick="alert('Акции находятся в стадии планирования. В ближайшем будущем они будут доступны. Благодарим за понимание.')">ПОДРОБНЕЕ</button>
+			</div>
+		</div>
+
+		<div class="sale3">
+			<div class="nsale">
+				БЛАГОТВОРИТЕЛЬНОСТЬ
+			</div>
+			<div class="osale">
+				сделайте взнос в "АЛЁШАФОНД" и получите скидку на всё 10%
+			</div>
+			<div class="isale">
+				<img src="sale3.jpg" alt="" class="people-img">
+			</div>
+			<div class="bsale">
+				<button class="buttonsale" href="#" onclick="alert('Акции находятся в стадии планирования. В ближайшем будущем они будут доступны. Благодарим за понимание.')">ПОДРОБНЕЕ</button>
+			</div>
+		</div>
+	</div>
+
+	<div class="closed">
+		<div class="salecl">
+			ЧТОБЫ ПОДПИСАТЬСЯ НА ЗАКРЫТЫЕ АКЦИИ
+		</div>
+		<div class="osalecl">
+			введите свой e-mail в поле ниже и нажмите на кнопку "подписаться"
+		</div>
+		<div class="insalecl">
+			<input class="saleinput" type="email" name="emailsale">
+		</div>
+		<div class="bsale">
+			<button class="buttonsale" href="#">ПОДПИСАТЬСЯ</button>
+		</div>
+	</div>
+
+	<div class="fouter">
+		<div class="fouternum">
+			ТЕЛЕФОН ДЛЯ СВЯЗИ: +7(812) ХХХ-ХХ-ХХ 
+		</div>
+		<div class="foutero">
+			изображения взяты от storyset на Freepik
+		</div>
+	</div>
+
+</body>
+</html>
