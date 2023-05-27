@@ -70,7 +70,6 @@
 	font-size: 1.5vw;
 	font-weight: 500;
 	vertical-align: middle;
-	position: flex;
 	margin: 2vh 1vw;
 }
 
@@ -82,22 +81,12 @@
 	border: 0.5vw double #D5AA72; 
 	border-radius: 1vw;
 	padding: 1vh 1vw;
-	-webkit-animation-name: fly1;
-    -webkit-animation-duration: 6s;
-    -webkit-animation-iteration-count: infinite;
+	animation-name: fly1;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
     animation-name: fly1;
     animation-duration: 6s;
     animation-iteration-count: infinite;
-}
-
-@-webkit-keyframes fly1 {
-    0% {border-color:#4C2818; background-color: #F5F6ED}
-    16.6% {border-color:#D5AA72; background: none}
-    33.2% {border-color:#D5AA72; background: none}
-    49.8% {border-color:#D5AA72; background: none}
-    66.4% {border-color:#D5AA72; background: none}
-	83% {border-color:#D5AA72; background: none}
-    100% {border-color:#4C2818; background-color: #F5F6ED}
 }
 
 @keyframes fly1 {
@@ -114,22 +103,12 @@
 	border: 0.5vw double #D5AA72; 
 	border-radius: 1vw;
 	padding: 1vh 1vw;
-	-webkit-animation-name: fly2;
-    -webkit-animation-duration: 6s;
-    -webkit-animation-iteration-count: infinite;
+	animation-name: fly2;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
     animation-name: fly2;
     animation-duration: 6s;
     animation-iteration-count: infinite;
-}
-
-@-webkit-keyframes fly2 {
-    0% {border-color:#D5AA72; background: none}
-    16.6% {border-color:#4C2818; background-color: #F5F6ED}
-    33.2% {border-color:#D5AA72; background: none}
-    49.8% {border-color:#D5AA72; background: none}
-    66.4% {border-color:#D5AA72; background: none}
-	83% {border-color:#D5AA72; background: none}
-    100% {border-color:#D5AA72; background: none}
 }
 
 @keyframes fly2 {
@@ -146,22 +125,12 @@
 	border: 0.5vw double #D5AA72; 
 	border-radius: 1vw;
 	padding: 1vh 1vw;
-	-webkit-animation-name: fly3;
-    -webkit-animation-duration: 6s;
-    -webkit-animation-iteration-count: infinite;
+	animation-name: fly3;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
     animation-name: fly3;
     animation-duration: 6s;
     animation-iteration-count: infinite;
-}
-
-@-webkit-keyframes fly3 {
-    0% {border-color:#D5AA72; background: none}
-    16.6% {border-color:#D5AA72; background: none}
-    33.2% {border-color:#4C2818; background-color: #F5F6ED}
-    49.8% {border-color:#D5AA72; background: none}
-    66.4% {border-color:#D5AA72; background: none}
-	83% {border-color:#D5AA72; background: none}
-    100% {border-color:#D5AA72; background: none}
 }
 
 @keyframes fly3 {
@@ -178,22 +147,12 @@
 	border: 0.5vw double #D5AA72; 
 	border-radius: 1vw;
 	padding: 1vh 1vw;
-	-webkit-animation-name: fly4;
-    -webkit-animation-duration: 6s;
-    -webkit-animation-iteration-count: infinite;
+	animation-name: fly4;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
     animation-name: fly4;
     animation-duration: 6s;
     animation-iteration-count: infinite;
-}
-
-@-webkit-keyframes fly4 {
-    0% {border-color:#D5AA72; background: none}
-    16.6% {border-color:#D5AA72; background: none}
-    33.2% {border-color:#D5AA72; background: none}
-    49.8% {border-color:#4C2818; background-color: #F5F6ED}
-    66.4% {border-color:#D5AA72; background: none}
-	83% {border-color:#D5AA72; background: none}
-    100% {border-color:#D5AA72; background: none}
 }
 
 @keyframes fly4 {
@@ -210,22 +169,12 @@
 	border: 0.5vw double #D5AA72; 
 	border-radius: 1vw;
 	padding: 1vh 1vw;
-	-webkit-animation-name: fly5;
-    -webkit-animation-duration: 6s;
-    -webkit-animation-iteration-count: infinite;
+	animation-name: fly5;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
     animation-name: fly5;
     animation-duration: 6s;
     animation-iteration-count: infinite;
-}
-
-@-webkit-keyframes fly5 {
-    0% {border-color:#D5AA72; background: none}
-    16.6% {border-color:#D5AA72; background: none}
-    33.2% {border-color:#D5AA72; background: none}
-    49.8% {border-color:#D5AA72; background: none}
-    66.4% {border-color:#4C2818; background-color: #F5F6ED}
-	83% {border-color:#D5AA72; background: none}
-    100% {border-color:#D5AA72; background: none}
 }
 
 @keyframes fly5 {
@@ -242,22 +191,12 @@
 	border: 0.5vw double #D5AA72; 
 	border-radius: 1vw;
 	padding: 1vh 1vw;
-	-webkit-animation-name: fly6;
-    -webkit-animation-duration: 6s;
-    -webkit-animation-iteration-count: infinite;
+	animation-name: fly6;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
     animation-name: fly6;
     animation-duration: 6s;
     animation-iteration-count: infinite;
-}
-
-@-webkit-keyframes fly6 {
-    0% {border-color:#D5AA72; background: none}
-    16.6% {border-color:#D5AA72; background: none}
-    33.2% {border-color:#D5AA72; background: none}
-    49.8% {border-color:#D5AA72; background: none}
-    66.4% {border-color:#D5AA72; background: none}
-	83% {border-color:#4C2818; background-color: #F5F6ED}
-    100% {border-color:#D5AA72; background: none}
 }
 
 @keyframes fly6 {
@@ -383,21 +322,12 @@ select#region {
     border: none;
     text-align: center;
     margin-left: 2vw;
-    -webkit-animation-name: select1;
-    -webkit-animation-duration: 5s;
-    -webkit-animation-iteration-count: infinite;
     animation-name: select1;
     animation-duration: 5s;
     animation-iteration-count: infinite;
-}
-
-@-webkit-keyframes select1 {
-    0% {background-color: #D5AA72;}
-    20% {background-color: #F5F6ED;}
-    40% {background-color: #F5F6ED;}
-    60% {background-color: #F5F6ED;}
-    80% {background-color: #F5F6ED;}
-    100% {background-color: #D5AA72;}
+    animation-name: select1;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
 }
 
 @keyframes select1 {
@@ -420,21 +350,12 @@ input#startdt {
     border: none;
     text-align: center;
     margin-left: 2vw;
-    -webkit-animation-name: select2;
-    -webkit-animation-duration: 5s;
-    -webkit-animation-iteration-count: infinite;
     animation-name: select2;
     animation-duration: 5s;
     animation-iteration-count: infinite;
-}
-
-@-webkit-keyframes select2 {
-    0% {background-color: #F5F6ED;}
-    20% {background-color: #D5AA72;}
-    40% {background-color: #F5F6ED;}
-    60% {background-color: #F5F6ED;}
-    80% {background-color: #F5F6ED;}
-    100% {background-color: #F5F6ED;}
+    animation-name: select2;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
 }
 
 @keyframes select2 {
@@ -457,21 +378,12 @@ input#enddt {
     border: none;
     text-align: center;
     margin-left: 2vw;
-    -webkit-animation-name: select3;
-    -webkit-animation-duration: 5s;
-    -webkit-animation-iteration-count: infinite;
     animation-name: select3;
     animation-duration: 5s;
     animation-iteration-count: infinite;
-}
-
-@-webkit-keyframes select3 {
-    0% {background-color: #F5F6ED;}
-    20% {background-color: #F5F6ED;}
-    40% {background-color: #D5AA72;}
-    60% {background-color: #F5F6ED;}
-    80% {background-color: #F5F6ED;}
-    100% {background-color: #F5F6ED;}
+    animation-name: select3;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
 }
 
 @keyframes select3 {
@@ -494,21 +406,12 @@ input#countppl {
     border: none;
     text-align: center;
     margin-left: 2vw;
-    -webkit-animation-name: select4;
-    -webkit-animation-duration: 5s;
-    -webkit-animation-iteration-count: infinite;
     animation-name: select4;
     animation-duration: 5s;
     animation-iteration-count: infinite;
-}
-
-@-webkit-keyframes select4 {
-    0% {background-color: #F5F6ED;}
-    20% {background-color: #F5F6ED;}
-    40% {background-color: #F5F6ED;}
-    60% {background-color: #D5AA72;}
-    80% {background-color: #F5F6ED;}
-    100% {background-color: #F5F6ED;}
+    animation-name: select4;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
 }
 
 @keyframes select4 {
@@ -531,21 +434,12 @@ select#level {
     border: none;
     text-align: center;
     margin-left: 2vw;
-    -webkit-animation-name: select5;
-    -webkit-animation-duration: 5s;
-    -webkit-animation-iteration-count: infinite;
     animation-name: select5;
     animation-duration: 5s;
     animation-iteration-count: infinite;
-}
-
-@-webkit-keyframes select5 {
-    0% {background-color: #F5F6ED;}
-    20% {background-color: #F5F6ED;}
-    40% {background-color: #F5F6ED;}
-    60% {background-color: #F5F6ED;}
-    80% {background-color: #D5AA72;}
-    100% {background-color: #F5F6ED;}
+    animation-name: select5;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
 }
 
 @keyframes select5 {
@@ -566,21 +460,12 @@ select#level {
     border-radius: 8px;
     text-align: center;
     border: 0.5vw double #F5F6ED;
-    -webkit-animation-name: regiona1;
-    -webkit-animation-duration: 5s;
-    -webkit-animation-iteration-count: infinite;
     animation-name: regiona1;
     animation-duration: 5s;
     animation-iteration-count: infinite;
-}
-
-@-webkit-keyframes regiona1 {
-    0% {border-color:#4C2818; background-color: #F5F6ED;}
-    20% {border-color:#F5F6ED; background-color: #D5AA72;}
-    40% {border-color:#F5F6ED; background-color: #D5AA72;}
-    60% {border-color:#F5F6ED; background-color: #D5AA72;}
-    80% {border-color:#F5F6ED; background-color: #D5AA72;}
-    100% {border-color:#4C2818; background-color: #F5F6ED;}
+    animation-name: regiona1;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
 }
 
 @keyframes regiona1 {
@@ -601,21 +486,12 @@ select#level {
     border-radius: 8px;
     text-align: center;
     border: 0.5vw double #F5F6ED;
-    -webkit-animation-name: regiona2;
-    -webkit-animation-duration: 5s;
-    -webkit-animation-iteration-count: infinite;
     animation-name: regiona2;
     animation-duration: 5s;
     animation-iteration-count: infinite;
-}
-
-@-webkit-keyframes regiona2 {
-    0% {border-color:#F5F6ED; background-color: #D5AA72;}
-    20% {border-color:#4C2818; background-color: #F5F6ED;}
-    40% {border-color:#F5F6ED; background-color: #D5AA72;}
-    60% {border-color:#F5F6ED; background-color: #D5AA72;}
-    80% {border-color:#F5F6ED; background-color: #D5AA72;}
-    100% {border-color:#F5F6ED; background-color: #D5AA72;}
+    animation-name: regiona2;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
 }
 
 @keyframes regiona2 {
@@ -636,21 +512,12 @@ select#level {
     border-radius: 8px;
     text-align: center;
     border: 0.5vw double #F5F6ED;
-    -webkit-animation-name: regiona3;
-    -webkit-animation-duration: 5s;
-    -webkit-animation-iteration-count: infinite;
     animation-name: regiona3;
     animation-duration: 5s;
     animation-iteration-count: infinite;
-}
-
-@-webkit-keyframes regiona3 {
-    0% {border-color:#F5F6ED; background-color: #D5AA72;}
-    20% {border-color:#F5F6ED; background-color: #D5AA72;}
-    40% {border-color:#4C2818; background-color: #F5F6ED;}
-    60% {border-color:#F5F6ED; background-color: #D5AA72;}
-    80% {border-color:#F5F6ED; background-color: #D5AA72;}
-    100% {border-color:#F5F6ED; background-color: #D5AA72;}
+    animation-name: regiona3;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
 }
 
 @keyframes regiona3 {
@@ -671,21 +538,12 @@ select#level {
     border-radius: 8px;
     text-align: center;
     border: 0.5vw double #F5F6ED;
-    -webkit-animation-name: regiona4;
-    -webkit-animation-duration: 5s;
-    -webkit-animation-iteration-count: infinite;
     animation-name: regiona4;
     animation-duration: 5s;
     animation-iteration-count: infinite;
-}
-
-@-webkit-keyframes regiona4 {
-    0% {border-color:#F5F6ED; background-color: #D5AA72;}
-    20% {border-color:#F5F6ED; background-color: #D5AA72;}
-    40% {border-color:#F5F6ED; background-color: #D5AA72;}
-    60% {border-color:#4C2818; background-color: #F5F6ED;}
-    80% {border-color:#F5F6ED; background-color: #D5AA72;}
-    100% {border-color:#F5F6ED; background-color: #D5AA72;}
+    animation-name: regiona4;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
 }
 
 @keyframes regiona4 {
@@ -706,21 +564,12 @@ select#level {
     border-radius: 8px;
     text-align: center;
     border: 0.5vw double #F5F6ED;
-    -webkit-animation-name: regiona5;
-    -webkit-animation-duration: 5s;
-    -webkit-animation-iteration-count: infinite;
     animation-name: regiona5;
     animation-duration: 5s;
     animation-iteration-count: infinite;
-}
-
-@-webkit-keyframes regiona5 {
-    0% {border-color:#F5F6ED; background-color: #D5AA72;}
-    20% {border-color:#F5F6ED; background-color: #D5AA72;}
-    40% {border-color:#F5F6ED; background-color: #D5AA72;}
-    60% {border-color:#F5F6ED; background-color: #D5AA72;}
-    80% {border-color:#4C2818; background-color: #F5F6ED;}
-    100% {border-color:#F5F6ED; background-color: #D5AA72;}
+    animation-name: regiona5;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
 }
 
 @keyframes regiona5 {
@@ -769,7 +618,6 @@ input {
 }
 
 .mainmarsh {
-    position: flex;
     vertical-align: middle;
     text-align: center;
     background-image: url(marsh.png);
@@ -918,18 +766,12 @@ input.saleinput {
     margin-left: auto;
     margin-right: auto;
     width: 20vw;
-	-webkit-animation-name: sale;
-    -webkit-animation-duration: 1s;
-    -webkit-animation-iteration-count: infinite;
+	animation-name: sale;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
     animation-name: sale;
     animation-duration: 1s;
     animation-iteration-count: infinite;
-}
-
-@-webkit-keyframes sale {
-    0% {border-color:#4C2818; background-color: #F5F6ED}
-    50% {border-color:#F5F6ED; background-color: #D5AA72}
-    100% {border-color:#4C2818; background-color: #F5F6ED}
 }
 
 @keyframes sale {
