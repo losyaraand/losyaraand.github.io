@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Запись на бронирование</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <p>СИЗИФ - бронируйте у нас!</p>
+    </header>
+    <div id="mainform">
+        <div><h1>Бронирование дорожки для боулинга:</h1></div>
+        <form id="forma" action="">
+            <div>
+                <label>Имя: <input id="namepl" type="text" title="Имя является обязательным полем и может содержать только кириллицу." placeholder="Введите имя" pattern="([А-Яа-яЁё]+)" required/></label>
+            </div>
+            <div>
+                <label>Телефон: <input id="phonepl" title="Телефон является обязательным полем и должен содержать 10 цифр, начиная с +7 или 8 (далее введите цифры без пробелов и других знаков)." placeholder="Введите номер телефона" pattern="(8|\+7)[0-9]{10}" required/></label>
+            </div>
+            <div>
+                <label>Дата начала брони: <input id="datepl" type="date" value="2024-06-30" min="2024-06-30" /></label>
+            </div>
+            <div>
+                <label>Выберите длительность брони: <select id="timepl" title="Длительность брони является обязательным полем." required>
+                    <option>1 час</option>
+                    <option>3 часа</option>
+                    <option>5 часов</option>
+                </select></label>
+            </div>
+            <div id="stroke">
+                <p>Я подтверждаю бронирование: </p>
+                <input type="checkbox" checked="checked" class="checkbox" required title="Подтвердите бронирование." />
+            </div>
+            <div>
+                <button type="submit" class="but open">Забронировать</button>
+            </div>
+        </form>
+    </div>
+    <footer>
+        <p>Copyright. All rights reserved. 2024</p>
+    </footer>
+</body>
+<script>
+    document.querySelector('.checkbox').addEventListener('change', function() {
+        if (document.querySelector('.checkbox').checked) {
+            document.querySelector('.but').classList.remove('close')
+            document.querySelector('.but').classList.add('open')
+        } else {
+        document.querySelector('.but').classList.remove('open')
+        document.querySelector('.but').classList.add('close')
+        }
+    })
+    const date=document.getElementById('datepl').value
+    const time=document.getElementById('timepl').value
+    document.getElementById('forma').addEventListener('submit', function(e) {
+        e.preventDefault()
+        alert(`Бронирование на ${date} ${time} отправлено на рассмотрение администратора.`)
+    })
+</script>
+</html>
